@@ -9,14 +9,15 @@ t = bmp180.getTemperature()
 p = bmp180.getPressure()
 
 -- temperature in degrees Celsius  and Farenheit
-print("Temperature: "..(t/10).."."..(t%10).." deg C")
-print("Temperature: "..(9 * t / 50 + 32).."."..(9 * t / 5 % 10).." deg F")
+print("Temperature: "..(t/10).." deg C")
+print("Temperature: "..(9 * t / 50 + 32).." deg F")
 
 -- pressure in differents units
 print("Pressure: "..(p).." Pa")
-print("Pressure: "..(p / 100).."."..(p % 100).." hPa")
-print("Pressure: "..(p / 100).."."..(p % 100).." mbar")
-print("Pressure: "..(p * 75 / 10000).."."..((p * 75 % 10000) / 1000).." mmHg")
+print("Pressure: "..(p / 100).." hPa")
+print("Pressure: "..(p / 100).." mbar")
+print("Pressure: "..(p * 75 / 10000).." mmHg")
+print(math.floor(p * 75 / 10000).." mmHg")
 
 -- release module
 bmp180 = nil
