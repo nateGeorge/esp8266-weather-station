@@ -3,7 +3,7 @@ OSS = 1 -- oversampling setting (0-3)
 SDA_PIN = 6
 SCL_PIN = 7
 
-tmr.alarm(1, 15000, 1, function()
+tmr.alarm(3, 15000, 1, function()
     bmp = require("bmp180")
     bmp.init(SDA_PIN, SCL_PIN)
     bmp.read(OSS)
